@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cetvsk3irb8uo"]
+
+[ext_resource type="PackedScene" uid="uid://ohs4wgkrltcv" path="res://earth.tscn" id="1_5nof3"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tmgdq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4w2t"]
+radius = 244.0
+
+[node name="Earth2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = SubResource("ViewportTexture_tmgdq")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Earth" parent="SubViewport" instance=ExtResource("1_5nof3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(960, 540)
+shape = SubResource("CircleShape2D_c4w2t")
