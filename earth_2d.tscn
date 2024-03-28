@@ -6,7 +6,7 @@
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c4w2t"]
-radius = 244.0
+radius = 166.0
 
 [node name="Earth2D" type="Area2D"]
 

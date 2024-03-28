@@ -1,24 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://ohs4wgkrltcv"]
+[gd_scene load_steps=7 format=3 uid="uid://ohs4wgkrltcv"]
 
 [ext_resource type="Texture2D" uid="uid://dd1sj0yt3lpwd" path="res://Earth42Map.png" id="1_8y6jm"]
 [ext_resource type="Script" path="res://earth.gd" id="1_qk4vd"]
+[ext_resource type="Shader" uid="uid://0eexvlx0weft" path="res://earth_fresnel.tres" id="3_xlpn8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbthb"]
 albedo_texture = ExtResource("1_8y6jm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h7jfy"]
+render_priority = 0
+shader = ExtResource("3_xlpn8")
+
+[sub_resource type="SphereMesh" id="SphereMesh_s65as"]
+radius = 2.2
+height = 4.4
+radial_segments = 42
+rings = 42
 
 [node name="Earth" type="Node3D"]
 script = ExtResource("1_qk4vd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.60988, -0.35977, 0.706125, -0.0156281, 0.885383, 0.4646, -0.79234, -0.294386, 0.534354, 0.88957, 0.433186, 1.31412)
+transform = Transform3D(0.42603, -0.414471, 0.804184, -0.263572, 0.793467, 0.54858, -0.865464, -0.445672, 0.228798, 0.88957, 0.433186, 1.31412)
 shadow_enabled = true
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(-0.836152, 0.10417, 0.538515, 0.172397, 0.981956, 0.0777324, -0.5207, 0.157834, -0.839023, 0, 0, 0)
+transform = Transform3D(-0.953375, 0, 0.301788, 0, 1, 0, -0.301787, 0, -0.953375, 0, 0, 0)
 radius = 2.0
 radial_segments = 42
 rings = 42
 material = SubResource("StandardMaterial3D_nbthb")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.38629)
+transform = Transform3D(1, 0, 0, 0, 0.894934, 0.446198, 0, -0.446198, 0.894934, 0, 2, 4)
+
+[node name="FresnelAura" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_h7jfy")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_s65as")
