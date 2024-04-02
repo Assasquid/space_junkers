@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd1sj0yt3lpwd"
-path.bptc="res://.godot/imported/Earth42Map.png-06adb63356caac23cb33489028c0ca3f.bptc.ctex"
+uid="uid://bwpphshkbsiny"
+path="res://.godot/imported/YellowStar_XL.png-bff93d67fbad19b52c5cfc3c16158395.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Earth42Map.png"
-dest_files=["res://.godot/imported/Earth42Map.png-06adb63356caac23cb33489028c0ca3f.bptc.ctex"]
+source_file="res://assets/background/YellowStar_XL.png"
+dest_files=["res://.godot/imported/YellowStar_XL.png-bff93d67fbad19b52c5cfc3c16158395.ctex"]
 
 [params]
 
-compress/mode=2
-compress/high_quality=true
+compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

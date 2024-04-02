@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxc87cg73q335"]
+
+[ext_resource type="Texture2D" uid="uid://txkho8ld7o0v" path="res://assets/background/WhiteStar_M.png" id="1_hr5ie"]
+[ext_resource type="Script" path="res://background/stars/stars.gd" id="2_uu1qo"]
+
+[node name="WhiteStarM" type="Sprite2D"]
+texture = ExtResource("1_hr5ie")
+script = ExtResource("2_uu1qo")

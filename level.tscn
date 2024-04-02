@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chpp5om6k81k7"]
 
 [ext_resource type="PackedScene" uid="uid://yqg5alb4ssqq" path="res://background.tscn" id="1_jxq6n"]
-[ext_resource type="PackedScene" uid="uid://cetvsk3irb8uo" path="res://earth_2d.tscn" id="2_oryvn"]
+[ext_resource type="PackedScene" uid="uid://cetvsk3irb8uo" path="res://earth/earth_2d.tscn" id="2_oryvn"]
 
 [node name="Level" type="Node2D"]
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnmkrxx1d6lcb"]
+
+[ext_resource type="Texture2D" uid="uid://bwpphshkbsiny" path="res://assets/background/YellowStar_XL.png" id="1_gvnfr"]
+[ext_resource type="Script" path="res://background/stars/stars.gd" id="2_72616"]
+
+[node name="YellowStarXL" type="Sprite2D"]
+texture = ExtResource("1_gvnfr")
+script = ExtResource("2_72616")
