@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxinnf6u325vq"]
+
+[ext_resource type="Texture2D" uid="uid://ba485ed7dsxsd" path="res://assets/background/TealPlanet_XS.png" id="1_j8y61"]
+[ext_resource type="Script" path="res://background/planets/planet.gd" id="2_ji8ke"]
+
+[node name="TealPlanetXS" type="Sprite2D"]
+texture = ExtResource("1_j8y61")
+script = ExtResource("2_ji8ke")

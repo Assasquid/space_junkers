@@ -7,7 +7,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nbthb"]
 albedo_texture = ExtResource("1_8y6jm")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h7jfy"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upnes"]
 render_priority = 0
 shader = ExtResource("3_xlpn8")
 
@@ -35,6 +35,7 @@ material = SubResource("StandardMaterial3D_nbthb")
 transform = Transform3D(1, 0, 0, 0, 0.894934, 0.446198, 0, -0.446198, 0.894934, 0, 2, 4)
 
 [node name="FresnelAura" type="MeshInstance3D" parent="."]
-material_override = SubResource("ShaderMaterial_h7jfy")
+visible = false
+material_override = SubResource("ShaderMaterial_upnes")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_s65as")

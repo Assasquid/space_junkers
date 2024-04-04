@@ -1,7 +1,7 @@
 [gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://0eexvlx0weft"]
 
 [sub_resource type="VisualShaderNodeFresnel" id="VisualShaderNodeFresnel_37hie"]
-default_input_values = [2, false, 3, 6.0]
+default_input_values = [2, false, 3, 2.0]
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_lgpfk"]
 constant = Color(0.118529, 0.343485, 0.999986, 1)
@@ -15,7 +15,7 @@ render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_s
 
 void fragment() {
 // Fresnel:2
-	float n_in2p3 = 6.00000;
+	float n_in2p3 = 2.00000;
 	float n_out2p0 = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), n_in2p3);
 
 

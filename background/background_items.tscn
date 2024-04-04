@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm5vyrnies73e"]
+
+[ext_resource type="Script" path="res://background/background_items.gd" id="1_63w8n"]
+
+[node name="BackgroundItems" type="Node2D"]
+modulate = Color(1, 1, 1, 0.784314)
+script = ExtResource("1_63w8n")

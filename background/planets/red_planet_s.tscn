@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://n6kxkeo1ljao"]
+
+[ext_resource type="Texture2D" uid="uid://bl8pubns0hxun" path="res://assets/background/RedPlanet_S.png" id="1_bax68"]
+[ext_resource type="Script" path="res://background/planets/planet.gd" id="2_b8fko"]
+
+[node name="RedPlanetS" type="Sprite2D"]
+texture = ExtResource("1_bax68")
+script = ExtResource("2_b8fko")
