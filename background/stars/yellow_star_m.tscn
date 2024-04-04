@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://clfeurb70meac"]
 
 [ext_resource type="Texture2D" uid="uid://bf8ujs45addsn" path="res://assets/background/YellowStar_M.png" id="1_e153y"]
-[ext_resource type="Script" path="res://background/stars/stars.gd" id="2_1l87t"]
+[ext_resource type="Script" path="res://background/stars_and_atmosphere.gd" id="2_1l87t"]
 
 [node name="YellowStarM" type="Sprite2D"]
 texture = ExtResource("1_e153y")

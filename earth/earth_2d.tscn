@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cetvsk3irb8uo"]
+[gd_scene load_steps=7 format=3 uid="uid://cetvsk3irb8uo"]
 
 [ext_resource type="PackedScene" uid="uid://ohs4wgkrltcv" path="res://earth/earth.tscn" id="1_5nof3"]
+[ext_resource type="Texture2D" uid="uid://dhcmg84oj4iuu" path="res://background/EarthAtmosphereBackLayer.png" id="1_65el8"]
+[ext_resource type="Script" path="res://background/stars_and_atmosphere.gd" id="2_3q18g"]
+[ext_resource type="Texture2D" uid="uid://dphr14dlnsk0c" path="res://background/EarthAtmosphereFrontLayer.png" id="2_lpk52"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_tmgdq"]
 viewport_path = NodePath("SubViewport")
@@ -9,6 +12,25 @@ viewport_path = NodePath("SubViewport")
 radius = 166.0
 
 [node name="Earth2D" type="Area2D"]
+
+[node name="AtmosphereBack" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.705882)
+position = Vector2(960, 540)
+texture = ExtResource("1_65el8")
+script = ExtResource("2_3q18g")
+initial_scale = 1.0
+target_scale = 0.99
+min_duration = 1.24
+max_duration = 2.19
+
+[node name="AtmosphereFront" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_lpk52")
+script = ExtResource("2_3q18g")
+initial_scale = 1.0
+target_scale = 0.993
+min_duration = 1.24
+max_duration = 2.19
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(960, 540)

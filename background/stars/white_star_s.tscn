@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctj7m7141k3my"]
 
 [ext_resource type="Texture2D" uid="uid://vud5q0gwk6qh" path="res://assets/background/WhiteStar_S.png" id="1_gi3s6"]
-[ext_resource type="Script" path="res://background/stars/stars.gd" id="2_t7yva"]
+[ext_resource type="Script" path="res://background/stars_and_atmosphere.gd" id="2_t7yva"]
 
 [node name="WhiteStarS" type="Sprite2D"]
 texture = ExtResource("1_gi3s6")
