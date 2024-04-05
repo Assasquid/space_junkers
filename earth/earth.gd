@@ -1,9 +1,12 @@
 extends Node3D
 
-@export var rotation_speed := 0.1
+@export var rotation_speed_earth := 0.1
+@export var rotation_speed_clouds := 0.08
 
-@onready var csg_sphere_3d: CSGSphere3D = $CSGSphere3D
+@onready var earth: CSGSphere3D = $Earth
+@onready var clouds: CSGSphere3D = $Clouds
 
 
 func _process(delta: float) -> void:
-	csg_sphere_3d.rotation.y += rotation_speed * delta
+	earth.rotation.y += rotation_speed_earth * delta
+	clouds.rotation.y += rotation_speed_clouds * delta
