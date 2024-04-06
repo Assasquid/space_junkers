@@ -19,8 +19,8 @@ render_priority = 0
 shader = ExtResource("3_xlpn8")
 
 [sub_resource type="SphereMesh" id="SphereMesh_s65as"]
-radius = 2.2
-height = 4.4
+radius = 2.0
+height = 4.0
 radial_segments = 42
 rings = 42
 
@@ -40,16 +40,15 @@ material = SubResource("StandardMaterial3D_dxpa3")
 
 [node name="Clouds" type="CSGSphere3D" parent="."]
 transform = Transform3D(-0.953375, 0, 0.301788, 0, 1, 0, -0.301787, 0, -0.953375, 0, 0, 0)
-radius = 2.02
+radius = 2.0
 radial_segments = 42
 rings = 42
 material = SubResource("StandardMaterial3D_1pr36")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.894934, 0.446198, 0, -0.446198, 0.894934, 0, 2, 4)
-
 [node name="FresnelAura" type="MeshInstance3D" parent="."]
-visible = false
 material_override = SubResource("ShaderMaterial_upnes")
 cast_shadow = 0
 mesh = SubResource("SphereMesh_s65as")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894934, 0.446198, 0, -0.446198, 0.894934, 0, 2, 4)

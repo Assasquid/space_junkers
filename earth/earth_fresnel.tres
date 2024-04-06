@@ -1,10 +1,10 @@
 [gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://0eexvlx0weft"]
 
 [sub_resource type="VisualShaderNodeFresnel" id="VisualShaderNodeFresnel_37hie"]
-default_input_values = [2, false, 3, 2.0]
+default_input_values = [2, false, 3, 1.5]
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_lgpfk"]
-constant = Color(0.118529, 0.343485, 0.999986, 1)
+constant = Color(0, 0.013016, 0.42376, 1)
 
 [resource]
 code = "shader_type spatial;
@@ -15,12 +15,12 @@ render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_s
 
 void fragment() {
 // Fresnel:2
-	float n_in2p3 = 2.00000;
+	float n_in2p3 = 1.50000;
 	float n_out2p0 = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), n_in2p3);
 
 
 // ColorConstant:3
-	vec4 n_out3p0 = vec4(0.118529, 0.343485, 0.999986, 1.000000);
+	vec4 n_out3p0 = vec4(0.000000, 0.013016, 0.423760, 1.000000);
 
 
 // Output:0
@@ -31,6 +31,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-798, 119)
 nodes/fragment/2/node = SubResource("VisualShaderNodeFresnel_37hie")
 nodes/fragment/2/position = Vector2(-360, 260)
 nodes/fragment/3/node = SubResource("VisualShaderNodeColorConstant_lgpfk")
