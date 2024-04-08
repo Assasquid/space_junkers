@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy52ky8lygkl2"]
+
+[ext_resource type="Script" path="res://debris/debris.gd" id="1_wp6te"]
+[ext_resource type="Texture2D" uid="uid://dfestd8hc4s3l" path="res://assets/junk/31_RocketDamagedRealSize.png" id="1_xgcpg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jc1we"]
+radius = 20.0
+height = 112.0
+
+[node name="OldBooster" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_wp6te")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xgcpg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jc1we")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://r6qpex3i21vf"]
+
+[ext_resource type="Texture2D" uid="uid://b0t84c4bb8yxl" path="res://assets/junk/32_SatelliteDishDamagedRealSize.png" id="1_77xq7"]
+[ext_resource type="Script" path="res://debris/debris.gd" id="1_u14jr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wm1r2"]
+radius = 40.0
+
+[node name="OldSatelliteDish" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_u14jr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_77xq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wm1r2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

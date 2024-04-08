@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj3o4g32hr7bq"]
+
+[ext_resource type="Script" path="res://random_debri_placer.gd" id="1_ljrs7"]
+
+[node name="RandomDebriPlacer" type="Node2D"]
+script = ExtResource("1_ljrs7")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
