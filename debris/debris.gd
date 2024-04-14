@@ -7,6 +7,7 @@ var rotation_speed: float
 
 
 func _ready() -> void:
+	area_entered.connect(_on_area_entered)
 	rotation_speed = randf_range(min_rotation_speed, max_rotation_speed)
 
 

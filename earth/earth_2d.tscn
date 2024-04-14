@@ -12,6 +12,7 @@ viewport_path = NodePath("SubViewport")
 radius = 166.0
 
 [node name="Earth2D" type="Area2D"]
+collision_layer = 2
 
 [node name="AtmosphereBack" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.705882)
