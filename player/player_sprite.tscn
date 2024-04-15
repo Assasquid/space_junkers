@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5mlpbwisn2ch"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_xnx4w"]
+size = Vector3(48, 48, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_44eg0"]
+size = Vector2(12, 32)
+
+[sub_resource type="QuadMesh" id="QuadMesh_g5wxs"]
+size = Vector2(8, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lanqn"]
+size = Vector3(24, 24, 24)
+
+[node name="PlayerSprite" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(24, 1.07106)
+rotation = -1.5708
+mesh = SubResource("PrismMesh_xnx4w")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(-16, 19.0711)
+rotation = 1.5708
+mesh = SubResource("QuadMesh_44eg0")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+position = Vector2(-16, -16.9289)
+rotation = 1.5708
+mesh = SubResource("QuadMesh_44eg0")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
+position = Vector2(-6.99998, 26.0711)
+rotation = 0.785398
+mesh = SubResource("QuadMesh_g5wxs")
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="."]
+position = Vector2(-6.99998, -23.9289)
+rotation = 2.35619
+mesh = SubResource("QuadMesh_g5wxs")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
+position = Vector2(-12, 1.07106)
+rotation = 1.5708
+mesh = SubResource("BoxMesh_lanqn")

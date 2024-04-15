@@ -1,53 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://fhfxmrj0ks6y"]
+[gd_scene load_steps=3 format=3 uid="uid://fhfxmrj0ks6y"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_u5hsb"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_xnx4w"]
-size = Vector3(48, 48, 0)
-
-[sub_resource type="QuadMesh" id="QuadMesh_44eg0"]
-size = Vector2(12, 32)
-
-[sub_resource type="QuadMesh" id="QuadMesh_g5wxs"]
-size = Vector2(8, 12)
-
-[sub_resource type="BoxMesh" id="BoxMesh_lanqn"]
-size = Vector3(24, 24, 24)
+[ext_resource type="PackedScene" uid="uid://c5mlpbwisn2ch" path="res://player/player_sprite.tscn" id="2_kawii"]
 
 [node name="Player" type="Area2D"]
 collision_mask = 14
 script = ExtResource("1_u5hsb")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(16, 0)
-rotation = 4.71239
-mesh = SubResource("PrismMesh_xnx4w")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
-position = Vector2(-24, 18)
-rotation = 1.5708
-mesh = SubResource("QuadMesh_44eg0")
-
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
-position = Vector2(-24, -18)
-rotation = 1.5708
-mesh = SubResource("QuadMesh_44eg0")
-
-[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
-position = Vector2(-15, 25)
-rotation = 0.785398
-mesh = SubResource("QuadMesh_g5wxs")
-
-[node name="MeshInstance2D6" type="MeshInstance2D" parent="."]
-position = Vector2(-15, -25)
-rotation = 2.35619
-mesh = SubResource("QuadMesh_g5wxs")
-
-[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
-position = Vector2(-20, 0)
-rotation = 1.5708
-mesh = SubResource("BoxMesh_lanqn")
+start_position = Vector2(0, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(8, 1)
 rotation = 1.5708
 polygon = PackedVector2Array(0, -40, 32, 17, 24, 40, -24, 40, -32, 17)
+
+[node name="PlayerSprite" parent="." instance=ExtResource("2_kawii")]

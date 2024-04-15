@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci5adlkmo68ot"]
+
+[ext_resource type="PackedScene" uid="uid://c5mlpbwisn2ch" path="res://player/player_sprite.tscn" id="1_g8ye2"]
+
+[node name="PlayerGhosts" type="Node2D"]
+
+[node name="PlayerGhostLeft" parent="." instance=ExtResource("1_g8ye2")]
+position = Vector2(-1920, 0)
+
+[node name="PlayerGhostTop" parent="." instance=ExtResource("1_g8ye2")]
+position = Vector2(0, -1080)
+
+[node name="PlayerGhostRight" parent="." instance=ExtResource("1_g8ye2")]
+position = Vector2(1920, 0)
+
+[node name="PlayerGhostBottom" parent="." instance=ExtResource("1_g8ye2")]
+position = Vector2(0, 1080)

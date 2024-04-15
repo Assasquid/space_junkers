@@ -1,9 +1,15 @@
 extends Area2D
 
 @export var max_speed := 1200.0
-@export var velocity := Vector2(0, 0)
+@export var velocity := Vector2(0.0, 0.0)
 @export var steering_factor := 3.0
+@export var start_position := Vector2(0.0, 400.0)
 
+
+var ghosts := []
+
+func _ready() -> void:
+	position = start_position
 
 func _process(delta: float) -> void:
 	var direction := Vector2(0.0, 0.0)

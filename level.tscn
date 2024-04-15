@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://yqg5alb4ssqq" path="res://background.tscn" id="1_jxq6n"]
 [ext_resource type="PackedScene" uid="uid://cetvsk3irb8uo" path="res://earth/earth_2d.tscn" id="2_oryvn"]
 [ext_resource type="PackedScene" uid="uid://dj3o4g32hr7bq" path="res://debris/random_debri_placer.tscn" id="3_0t4fr"]
-[ext_resource type="PackedScene" uid="uid://fhfxmrj0ks6y" path="res://player/player.tscn" id="4_yujke"]
+[ext_resource type="PackedScene" uid="uid://cvbl1xxts02qv" path="res://player/player_and_ghosts.tscn" id="4_0u5j8"]
 
 [node name="Level" type="Node2D"]
 
@@ -17,6 +17,4 @@ position = Vector2(960, 540)
 
 [node name="RandomDebriPlacer" parent="." instance=ExtResource("3_0t4fr")]
 
-[node name="Player" parent="." instance=ExtResource("4_yujke")]
-z_index = 10
-position = Vector2(960, 980)
+[node name="PlayerAndGhosts" parent="." instance=ExtResource("4_0u5j8")]
