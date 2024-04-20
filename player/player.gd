@@ -1,15 +1,12 @@
-extends Area2D
+extends Node2D
 
 @export var max_speed := 1200.0
-@export var velocity := Vector2(0.0, 0.0)
 @export var steering_factor := 3.0
-@export var start_position := Vector2(0.0, 400.0)
 
+@onready var player: Area2D = $Player
 
-var ghosts := []
+var velocity := Vector2(0.0, 0.0)
 
-func _ready() -> void:
-	position = start_position
 
 func _process(delta: float) -> void:
 	var direction := Vector2(0.0, 0.0)
@@ -22,11 +19,14 @@ func _process(delta: float) -> void:
 	var desired_velocity := max_speed * direction
 	var steering_vector := desired_velocity - velocity
 	velocity += steering_vector * steering_factor * delta
-	position += velocity * delta
+	global_position += velocity * delta
 	
 	var viewport_size := get_viewport_rect().size
-	position.x = wrapf(position.x, 0, viewport_size.x)
-	position.y = wrapf(position.y, 0, viewport_size.y)
+	global_position.x = wrapf(global_position.x, 0, viewport_size.x)
+	global_position.y = wrapf(global_position.y, 0, viewport_size.y)
 	
 	if velocity.length() > 0.0:
-		rotation = velocity.angle()
+		player.global_rotation = velocity.angle()
+
+func get_velocity() -> Vector2:
+	return velocity

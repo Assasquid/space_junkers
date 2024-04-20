@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvbl1xxts02qv"]
+[gd_scene load_steps=5 format=3 uid="uid://cvbl1xxts02qv"]
 
 [ext_resource type="Script" path="res://player/ghosts_movement.gd" id="1_03760"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_dplkp"]
 [ext_resource type="PackedScene" uid="uid://fhfxmrj0ks6y" path="res://player/player.tscn" id="1_v7eyv"]
 [ext_resource type="PackedScene" uid="uid://ci5adlkmo68ot" path="res://player/player_ghosts.tscn" id="2_nw6qx"]
 
-[node name="PlayerAndGhosts" type="Node2D"]
-script = ExtResource("1_03760")
+[node name="PlayerAndGhosts" type="Node2D" groups=["player"]]
+script = ExtResource("1_dplkp")
 
 [node name="Player" parent="." instance=ExtResource("1_v7eyv")]
+script = null
 
 [node name="PlayerGhosts" parent="." instance=ExtResource("2_nw6qx")]
+script = ExtResource("1_03760")

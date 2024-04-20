@@ -1,16 +1,15 @@
 extends Node2D
 
-@onready var player: Area2D = $Player
-@onready var player_ghosts: Node2D = $PlayerGhosts
+@onready var player: Area2D = $"../Player"
 
 var ghosts := []
 
 func _ready() -> void:
-	for child in player_ghosts.get_children():
+	for child in get_children():
 		ghosts.append(child)
 
-func _process(delta: float) -> void:
-	player_ghosts.position = player.position
+func _process(_delta: float) -> void:
+	global_position = player.global_position
 	
 	for ghost in ghosts:
-		ghost.rotation = player.rotation
+		ghost.global_rotation = player.global_rotation

@@ -6,7 +6,6 @@
 [node name="Player" type="Area2D"]
 collision_mask = 14
 script = ExtResource("1_u5hsb")
-start_position = Vector2(0, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(8, 1)

@@ -18,3 +18,4 @@ position = Vector2(960, 540)
 [node name="RandomDebriPlacer" parent="." instance=ExtResource("3_0t4fr")]
 
 [node name="PlayerAndGhosts" parent="." instance=ExtResource("4_0u5j8")]
+position = Vector2(960, 900)
